@@ -1,10 +1,9 @@
 :root {
   /* BASIC COLORS */
   --clr-brown: hsl(40, 2%, 37%);
-  --clr-cream: hsl(17, 39%, 91%);
   --clr-dark-cream: hsl(26, 8%, 82%);
   --clr-gold: hsl(41, 49%, 68%);
-  --clr-gold--hover: hsl(41, 41%, 61%);
+
   --clr-text: hsl(270, 3%, 29%);
   --clr-whiteop: hsla(0, 0%, 100%, 0.787);
   --clr-white: hsl(0, 0%, 100%);
@@ -33,15 +32,18 @@ body {
   color: var(--clr-text);
   font-family: var(--fnf-para);
   font-size: 62.5%;
-  height: 400vh;
 }
 a {
   color: var(--clr-text);
 }
 p,
-.card__list--items {
+.card__list--items,
+.adress--title,
+.page__footer li {
   font-size: clamp(0.95rem, 3vw, 0.96rem);
   font-family: var(--fnf-para);
+  font-style: normal;
+  font-weight: 400;
 }
 img {
   width: 100%;
@@ -122,7 +124,7 @@ img {
 }
 
 .header__section--one {
-  background-image: url(./images/beauty.webp);
+  background-image: url(./images/beauty.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -161,7 +163,7 @@ img {
 
 /* MAIN CONTENT */
 .main__content {
-  padding: 1rem 0.7rem;
+  padding: 1rem;
 }
 .content--title {
   font-size: clamp(1.55rem, -1.5rem + 10vw, 2.2rem);
@@ -209,17 +211,33 @@ img {
   margin: 2rem 0;
   max-width: 350px;
 }
+.consultation__card {
+  background-color: var(--clr-dark-cream);
+  border-radius: 0.6em;
+  max-width: 500px;
+  overflow: hidden;
+}
 .card__header {
   grid-area: header;
   display: flex;
   justify-content: center;
   margin: 1rem 0;
 }
+
+.card__header.consultation__header {
+  margin: 0 0 0.5rem 0;
+}
+.consultation--image {
+  width: 100%;
+}
+.consultation__card .card__body {
+  padding: 1rem 1.2rem;
+}
 .card--image {
   width: 7rem;
 }
 .card--image.clipX {
-  width: 6.4rem;
+  width: 6.2rem;
 }
 .card__body {
   grid-area: body;
@@ -238,7 +256,13 @@ img {
 .card--title.center {
   text-align: center;
 }
-
+.price--wrapper {
+  margin: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 th {
   padding: 1rem;
 }
@@ -251,6 +275,47 @@ td {
   padding: 0.5em;
 }
 
+.page__footer {
+  background-color: var(--clr-dark-cream);
+  padding: 1.25rem 0;
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.footer__card {
+  display: flex;
+  margin: 1rem 0;
+}
+.location__image--wrapper {
+  display: flex;
+  align-items: flex-start;
+}
+.footer__card--image {
+  width: 4rem;
+}
+.footer__card--image {
+  display: flex;
+  justify-content: center;
+}
+.footer__card--image.hands {
+  padding-inline: 0.5rem;
+}
+.footer--title-section {
+  font-size: clamp(1rem, -1.5rem + 6vw, 1.1rem);
+}
+.social__link--wrapper {
+  display: flex;
+  margin: 0.2rem 1rem;
+  gap: 1rem;
+}
+.social--icon {
+  width: 2rem;
+}
+.author {
+  padding: 1.2rem;
+}
 @media screen and (min-width: 660px) {
   .page__header {
     background-image: url(./images/beauty.jpg);
@@ -300,6 +365,7 @@ td {
     margin: 2rem 0;
     max-width: max-content;
   }
+
   .grid--info {
     justify-items: start;
     align-items: center;
@@ -310,9 +376,36 @@ td {
   .card--title.center {
     text-align: left;
   }
+  .price--wrapper {
+    flex-direction: row;
+  }
+  .price--wrapper > * {
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+  }
+  .consultation__header.card__header {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  .consultation__header.card__header img {
+    width: 100%;
+  }
+  .consultation__card {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "header body";
+    min-width: 800px;
+  }
+  .footer__card--image .hands {
+    display: block;
+  }
 }
 
 @media screen and (min-width: 920px) {
+  .main__content {
+    padding: 0;
+  }
   .main__navigation {
     padding: 0;
     position: relative;
