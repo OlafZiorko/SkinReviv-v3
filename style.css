@@ -68,7 +68,7 @@ img {
 .colse__btn--wrapper {
   display: flex;
   justify-content: flex-end;
-  padding: 1rem 0.5rem;
+  padding: 1.1rem 1.2rem;
 }
 .close__button {
   padding-top: 0.5rem;
@@ -117,7 +117,7 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 5rem;
+  margin-top: 2rem;
 }
 .drop__list--items {
   text-align: center;
@@ -149,6 +149,7 @@ img {
 
 .burger__menu {
   width: 1.5rem;
+  margin-right: 0.3rem;
 }
 /* HEADER SECTION */
 
