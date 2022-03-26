@@ -469,6 +469,11 @@ td {
   .footer__card--image .hands {
     display: block;
   }
+  .offer--wrapper {
+    background-color: var(--clr-white);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  }
 }
 
 @media screen and (min-width: 920px) {
@@ -485,11 +490,7 @@ td {
   .burger__menu {
     display: none;
   }
-  .offer--wrapper {
-    background-color: var(--clr-white);
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-  }
+
   .offer--description {
     padding-right: calc(4% + 5em);
     padding-left: 1rem;
