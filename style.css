@@ -32,11 +32,13 @@ body {
   color: var(--clr-text);
   font-family: var(--fnf-para);
   font-size: 62.5%;
+  height: 100%;
 }
 a {
   color: var(--clr-text);
 }
 p,
+.sub__list--items,
 .card__list--items,
 .adress--title,
 .page__footer li,
@@ -49,6 +51,34 @@ p,
 img {
   width: 100%;
   object-fit: contain;
+}
+
+.drop__down--menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  height: 0%;
+  width: 0%;
+  background-color: var(--clr-white);
+  display: none;
+  flex-direction: column;
+}
+.colse__btn--wrapper {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem 0.5rem;
+}
+.close__button {
+  padding-top: 0.5rem;
+  width: 2rem;
+}
+
+.visible {
+  height: 100vh;
+  width: 100vw;
+  display: block;
 }
 /* PAGE WRAPPER */
 .page__wrapper {
@@ -83,20 +113,33 @@ img {
 .navigation__list {
   display: none;
 }
-
+.drop__navigation__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 5rem;
+}
+.drop__list--items {
+  text-align: center;
+}
 .list--items {
-  font-weight: 400;
-  letter-spacing: 1px;
   display: flex;
 }
-.list--items a {
+.list--items a,
+.drop__list--items a {
   color: var(--clr-text);
   font-size: clamp(0.95rem, 3vw, 1rem);
   display: block;
   position: relative;
-  padding-top: 2rem;
-  padding: 2rem 1rem 1.5rem 1rem;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+
   transition: background-color 250ms ease-in-out;
+}
+.drop__list--items a {
+  padding: 2rem;
+  justify-content: center;
 }
 .list--items a:hover,
 .list--items a:focus {
@@ -104,8 +147,8 @@ img {
   color: var(--clr-white);
 }
 
-.burger-menu {
-  width: 1.25rem;
+.burger__menu {
+  width: 1.5rem;
 }
 /* HEADER SECTION */
 
@@ -258,8 +301,10 @@ td {
 }
 
 .offer--wrapper {
+  background-color: var(--clr-white);
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   margin: 3rem 0;
   place-content: center;
   justify-items: center;
@@ -274,7 +319,8 @@ td {
   margin: 1rem 1.5rem;
   transition: all 200ms ease-in-out;
 }
-.offer__card:hover {
+.offer__card:hover,
+.offer__card:focus {
   transform: perspective(600px) scale(1.05);
   perspective-origin: center;
 }
@@ -298,6 +344,7 @@ td {
 .page__footer,
 .author {
   border: 2px solid var(--clr-gold);
+  margin: 0 0.5rem;
 }
 .page__footer {
   background-color: var(--clr-white);
@@ -434,8 +481,13 @@ td {
   .navigation__list {
     display: flex;
   }
-  .burger-menu {
+  .burger__menu {
     display: none;
+  }
+  .offer--wrapper {
+    background-color: var(--clr-white);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
   }
   .offer--description {
     padding-right: calc(4% + 5em);
