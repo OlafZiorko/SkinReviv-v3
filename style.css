@@ -197,11 +197,6 @@ img {
   max-width: 350px;
 }
 
-.offer__card:hover {
-  transform: perspective(600px) scale(1.05) rotateY(3deg);
-  perspective-origin: center;
-}
-
 .card__header {
   grid-area: header;
   margin: 1rem 0;
@@ -265,7 +260,7 @@ td {
 .offer--wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-
+  margin: 3rem 0;
   place-content: center;
   justify-items: center;
 }
@@ -279,6 +274,11 @@ td {
   margin: 1rem 1.5rem;
   transition: all 200ms ease-in-out;
 }
+.offer__card:hover {
+  transform: perspective(600px) scale(1.05);
+  perspective-origin: center;
+}
+
 .offer--image {
   border-radius: 1rem;
 }
