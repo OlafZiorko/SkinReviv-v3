@@ -196,13 +196,16 @@ img {
   font-size: clamp(2rem, 5vw, 2.5rem);
   margin-bottom: 0.5rem;
 }
+.offer--description {
+  padding-bottom: 1rem;
+}
 
 /* MAIN CONTENT */
 .main__content {
   padding: 0 1rem;
 }
 .content--title {
-  font-size: clamp(1.55rem, -1.5rem + 10vw, 2.2rem);
+  font-size: clamp(1.85rem, -1.5rem + 10vw, 2.2rem);
   font-family: var(--fnf-headings);
   padding: 0.2em;
   font-weight: 400;
@@ -230,6 +233,7 @@ img {
 }
 .subnav__list {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 }
 .subnav__list--items {
@@ -238,7 +242,7 @@ img {
 .subnav__list .subnav__list--items a {
   text-transform: capitalize;
   padding: 1em 0.5em;
-  font-size: clamp(0.8rem, 3vw, 0.85rem);
+  font-size: clamp(0.95rem, 3vw, 0.85rem);
 }
 .grid--about,
 .grid--info {
