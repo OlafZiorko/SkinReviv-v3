@@ -108,6 +108,7 @@
     <!--Dodaj cos o peelingu w opise strony-->
 
     <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="./style/peeling.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -123,9 +124,8 @@
 
     <div class="drop__down--menu">
       <div class="colse__btn--wrapper">
-        <h2><a class="company--name" href="../index.html">Skin Reviv</a></h2>
         <img
-          class="close__button"
+          class="close__btn"
           src="../images/cancel.png"
           alt="ikona zamykanie menu"
         />
@@ -176,12 +176,19 @@
       </header>
       <!--MAIN CONTENT-->
       <main class="main__content">
-        <h1 class="content--title">
-          Peeling medyczny
-          <strong class="company--name">
-            -&nbsp;Rodzaje i zastswanie zabiegu &nbsp;-
-          </strong>
-        </h1>
+        <h1 class="content--title">Peeling Chemiczny w Skin&nbsp;Reviv</h1>
+
+        <nav class="content__subnav">
+          <ul class="subnav__list">
+            <li class="subnav__list--items">
+              <a href="#wskazania">Przed zabiegiem</a>
+            </li>
+            <li class="subnav__list--items"><a href="#cennik">Cennik</a></li>
+            <li class="subnav__list--items">
+              <a href="#oferta"> inne oferty</a>
+            </li>
+          </ul>
+        </nav>
         <section class="grid--about">
           <div class="card">
             <div class="card__header">
@@ -195,7 +202,6 @@
             <article class="card__body">
               <h3 class="card--title">Co to są peelingi chemiczne?</h3>
               <p class="card--description">
-                <!--TUTAJ MASZ PISAĆ -->
                 Zabieg polega na aplikacji substancji chemicznych, które mają za
                 zadanie złuszczenie skóry, powodując jej regenerację i produkcję
                 kolagenu. Dzięki zastosowaniu peelingów skóra staje się
@@ -218,17 +224,15 @@
           <div class="card">
             <div class="card__header">
               <img
-                src="../images/injection.webp"
+                src="../images/pharmacy.png"
                 class="card--image"
                 alt="zdjęcie strzykawki podczas wykonywania zabiegu mezoterapii igłowej skóry głowy"
               />
-              <!--<a href="https://www.flaticon.com/free-icons/injection" title="injection icons">Injection icons created by Icongeek26 - Flaticon</a> #625959
-            >-->
+              <!--<a href="https://www.flaticon.com/free-icons/pharmacy" title="pharmacy icons">Pharmacy icons created by rukanicon - Flaticon</a>-->
             </div>
             <article class="card__body">
               <h3 class="card--title">Na czym polega zabieg?</h3>
               <p class="card--description">
-                <!--TUTAJ MASZ PISAĆ -->
                 Peeling chemiczny to zabieg polegający na aplikacji substancji
                 chemicznych, które mają za zadanie stymulowanie skóry, powodując
                 jej regenerację i produkcję kolagenu. Kosmetolog po dokładnym
@@ -258,7 +262,6 @@
                 utrzymują?
               </h3>
               <p class="card--description">
-                <!--TUTAJ MASZ PISAĆ -->
                 Dzięki zastosowaniu peelingów chemicznych skóra staje się
                 nawilżona, napięta, a zmarszczki ulegają spłycaniu.
                 Wykorzystując potencjał jaki dają nam kwasy możemy dogłębnie
@@ -274,17 +277,16 @@
           <div class="card">
             <div class="card__header">
               <img
-                src="../images/repeating.webp"
+                src="../images/injection.webp"
                 class="card--image"
-                alt="Co ile należy powtarzać zabiegi odmładzające"
-                aria-hidden="true"
+                alt="zdjęcie kalendarza do pytania , jak długo utrzymuje się efekt zabiegu mezoterapii igłowej "
               />
-              <!--<a href="https://www.flaticon.com/free-icons/repeat" title="repeat icons">Repeat icons created by Stockes Design - Flaticon</a>-->
+              <!--<a href="https://www.flaticon.com/free-icons/injection" title="injection icons">Injection icons created by Icongeek26 - Flaticon</a> 
+            >-->
             </div>
             <article class="card__body">
               <h3 class="card--title">Co wyróżnia peeling medyczny VEDARA?</h3>
               <p class="card--description">
-                <!--TUTAJ MASZ PISAĆ -->
                 Kwasy medyczne VEDARA MEDICAL cechuje najwyższe stężenie
                 substancji aktywnych. Stymulują pracę komórek skóry do
                 regeneracji nie uszkadzając naskórka. Każda skóra skóra boryka
@@ -305,8 +307,28 @@
               </p>
             </article>
           </div>
+          <div class="card">
+            <div class="card__header">
+              <img
+                src="../images/repeating.webp"
+                class="card--image"
+                alt="Co ile należy powtarzać zabiegi odmładzające"
+                aria-hidden="true"
+              />
+              <!--<a href="https://www.flaticon.com/free-icons/repeat" title="repeat icons">Repeat icons created by Stockes Design - Flaticon</a>-->
+            </div>
+            <article class="card__body">
+              <h3 class="card--title">Co ile należy powtarzać zabiegi?</h3>
+              <p class="card--description">
+                Ilość zabiegów ustala się w oparciu o aktualny stan skóry oraz
+                po ustaleniu swoistych oczekiwań. Zazwyczaj to 3-4 zabiegi w
+                odstępach 14-dniowych.
+              </p>
+            </article>
+          </div>
         </section>
-        <section class="grid--info">
+
+        <section class="grid--info" id="wskazania">
           <div class="card">
             <div class="card__header">
               <img
@@ -337,6 +359,7 @@
               </ul>
             </article>
           </div>
+
           <div class="card">
             <div class="card__header">
               <img
@@ -367,34 +390,14 @@
         </section>
         <!--PRICE SECTION-->
         <section class="price__section">
-          <h3 class="content--title">Cennik</h3>
+          <h3 class="content--title" id="cennik">Cennik</h3>
           <div class="price--wrapper">
             <table class="table">
               <tbody>
                 <tr>
                   <th>1</th>
-                  <td>Mezoterapia preparatami firmy RRS®</td>
-                  <td>od 300zł</td>
-                </tr>
-                <tr>
-                  <th>2</th>
-                  <td>Mezoterapia NCTF 135 HA</td>
-                  <td>od 500zł</td>
-                </tr>
-                <tr>
-                  <th>3</th>
-                  <td>Peptydowa mezoterapia skóry głowy Dr Cyj</td>
-                  <td>od 600zł</td>
-                </tr>
-                <tr>
-                  <th>4</th>
-                  <td>Profhilo molekuła młodości 2 ml</td>
-                  <td>od 1000zł</td>
-                </tr>
-                <tr>
-                  <th>5</th>
-                  <td>Ejal40 2 ml</td>
-                  <td>od 550zł</td>
+                  <td>PEELING MEDYCZNY VEDARA –</td>
+                  <td>od 200 zł</td>
                 </tr>
               </tbody>
             </table>
@@ -403,7 +406,7 @@
       </main>
       <!--MORE OFFER-->
       <section class="more__offer">
-        <h3 class="content--title">Poznaj nasza ofertę.</h3>
+        <h3 class="content--title" id="oferta">Poznaj nasza ofertę.</h3>
 
         <ul class="offer--wrapper">
           <li>
@@ -438,9 +441,9 @@
             <div class="offer__card">
               <div class="offer__card__header">
                 <img
-                  src="../images/peeling.webp"
+                  src="../images/beauty.webp"
                   class="offer--image"
-                  alt="zdjęcie strzykawki podczas wykonywania zabiegu mezoterapii igłowej skóry głowy"
+                  alt="zdjęcie pięknej młodej kobiety reklamująca zabieg mezoterapii"
                 />
               </div>
 

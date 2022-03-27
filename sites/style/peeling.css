@@ -1,0 +1,22 @@
+.header__section--one {
+  background-image: url(/images/peeling.webp);
+}
+@media screen and (min-width: 660px) {
+  .page__header {
+    background-image: url(/images/peeling.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    grid-template-columns: 35% 65%;
+
+    grid-template-rows: repeat(2, 1fr);
+    align-items: start;
+    grid-template-areas:
+      "section-two  section-one "
+      "section-two  section-one ";
+  }
+  .header__section--one {
+    background-image: none;
+  }
+}

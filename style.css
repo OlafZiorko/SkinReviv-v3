@@ -38,7 +38,7 @@ a {
   color: var(--clr-text);
 }
 p,
-.drop__list--items,
+.subnav__list .drop__list--items,
 .sub__list--items,
 .card__list--items,
 .adress--title,
@@ -69,10 +69,9 @@ img {
 .colse__btn--wrapper {
   display: flex;
   justify-content: flex-start;
-  padding: 0 1.8rem;
-  border-bottom: 1px solid var(--clr-text);
+  padding: 1rem 1.8rem;
 }
-.close__button {
+.close__btn {
   padding-top: 0.5rem;
   width: 2rem;
   margin-left: auto;
@@ -106,7 +105,6 @@ img {
   -moz-box-shadow: 0px 5px 23px -20px rgba(66, 68, 90, 1);
   box-shadow: 0px 5px 23px -20px rgb(66 68 90);
 }
-.colse__btn--wrapper .company--name,
 .main__navigation .company--name {
   color: var(--clr-gold);
   font-family: var(--fnf-headings);
@@ -168,7 +166,6 @@ img {
   grid-template-areas:
     "section-one"
     "section-two";
-  max-height: 120vh;
   position: relative;
   max-width: 1400px;
   margin: 0 auto;
@@ -184,7 +181,7 @@ img {
   justify-content: center;
   align-items: flex-end;
   padding: 1.5rem;
-  min-height: 400px;
+  min-height: 450px;
   min-width: min-content;
   grid-area: section-one;
 }
@@ -192,7 +189,7 @@ img {
 .header__section--two {
   background-color: var(--clr-dark-cream);
   grid-area: section-two;
-  padding: 2rem;
+  padding: 1em 2em;
 }
 .company--offer {
   font-family: var(--fnf-headings);
@@ -202,10 +199,11 @@ img {
 
 /* MAIN CONTENT */
 .main__content {
-  padding: 1rem;
+  padding: 0 1rem;
 }
 .content--title {
   font-size: clamp(1.55rem, -1.5rem + 10vw, 2.2rem);
+  font-family: var(--fnf-headings);
   padding: 0.2em;
   font-weight: 400;
   position: relative;
@@ -230,7 +228,18 @@ img {
   transform: translateX(-1em);
   bottom: -1rem;
 }
-
+.subnav__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.subnav__list--items {
+  display: flex;
+}
+.subnav__list .subnav__list--items a {
+  text-transform: capitalize;
+  padding: 1em 0.5em;
+  font-size: clamp(0.8rem, 3vw, 0.85rem);
+}
 .grid--about,
 .grid--info {
   display: grid;
@@ -403,44 +412,47 @@ td {
   text-align: center;
 }
 
+@media screen and (min-width: 410px) {
+  .subnav__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
 @media screen and (min-width: 660px) {
   .page__header {
     background-image: url(./images/beauty.webp);
+    background-color: var(--clr-dark-cream);
     background-repeat: no-repeat;
-    background-position: 30%;
     background-size: cover;
-    grid-template-columns: 50% 50%;
+    background-position-x: 20%;
+    grid-template-columns: 30% 70%;
     grid-template-rows: repeat(2, 1fr);
     align-items: start;
     grid-template-areas:
       "section-two  section-one "
       "section-two  section-one ";
 
-    min-height: 88vh;
-    max-height: 88vh;
+    min-height: 80vh;
+    max-height: 80vh;
   }
   .header__section--one {
     background-image: none;
     justify-content: start;
-    position: absolute;
-    top: 28%;
-    left: -20%;
   }
   .header__section--two {
-    align-self: center;
-    background-color: transparent;
     grid-area: section-two;
     padding: 2em;
     position: absolute;
-    top: 25%;
-  }
+    left: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.863);
+    border-radius: 0.4em;
 
-  .offer--description {
-    font-weight: 500;
-    padding-right: calc(4% + 4em);
-  }
-  .content--title {
-    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 
@@ -484,6 +496,9 @@ td {
 }
 
 @media screen and (min-width: 920px) {
+  .page__header {
+    background-position: calc(10% + 5em);
+  }
   .main__content {
     padding: 0;
   }
@@ -498,22 +513,14 @@ td {
     display: none;
   }
 
-  .offer--description {
-    padding-right: calc(4% + 5em);
-    padding-left: 1rem;
-  }
-  .company--offer {
-    padding-left: 1rem;
-  }
   .offer--list {
     flex-direction: row;
     border-radius: 1rem;
   }
 }
-
-@media screen and (min-width: 1000px) {
-  .offer--description {
-    padding-right: calc(6% + 9em);
+@media screen and (min-width: 1100px) {
+  .page__header {
+    background-position: calc(10% + 15em);
   }
 }
 @media screen and (min-width: 1152px) {
