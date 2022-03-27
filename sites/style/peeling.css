@@ -1,10 +1,11 @@
 .header__section--one {
   background-image: url(/images/peeling.webp);
+  background-position: center right;
 }
 @media screen and (min-width: 660px) {
   .page__header {
     background-image: url(/images/peeling.webp);
-    background-position: center;
+    background-position: center right;
     background-repeat: no-repeat;
     background-size: cover;
 
